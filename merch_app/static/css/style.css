@@ -1,0 +1,73 @@
+.card {
+  background: linear-gradient(to bottom right, #996633 0%, #999966 100%);
+  color: rgb(255, 250, 250) !important;
+  border-top-right-radius: 80px !important;
+  border-bottom-left-radius: 80px !important;
+  box-shadow: 5px 5px 5px gray !important;
+  border-radius: 10px;
+  margin: auto;
+  height: 400px;
+  margin-top: 30px;
+}
+
+.navbar {
+  background: linear-gradient(to bottom, #996633 0%, #999966 100%);
+  color: rgb(255, 250, 250) !important;
+  box-shadow: 5px 5px 5px gray !important;
+  border-bottom-right-radius: 90px !important;
+}
+
+.imgcard {
+  height: 300px !important;
+  border-radius: 10px;
+  border-top-right-radius: 80px !important;
+  border-bottom-left-radius: 80px !important;
+}
+
+.btn-secondary {
+  background: linear-gradient(to bottom right, #663300 7%, #996633 61%);
+  color: rgb(255, 255, 255) !important;
+  font-size: 14px;
+  border-color: #5e4800 !important;
+  box-shadow: 2px 2px 2px rgb(141, 98, 33) !important;
+}
+
+.modal-header {
+  background: linear-gradient(to bottom, #663300 7%, #996633 61%);
+}
+
+.modal-footer {
+  background: linear-gradient(to bottom, #663300 7%, #996633 61%);
+}
+
+#modalImg {
+  height: 300px;
+  width: 300px;
+}
+
+#productImage {
+  height: 300px;
+  width: 300px;
+  margin-left: 20%;
+}
+
+.orderbtn:hover {
+  border-color: #5e4800 !important;
+  box-shadow: 2px 2px 2px rgb(141, 98, 33) !important;
+}
+
+.inner2 {
+  background: linear-gradient(to bottom left, #663300 7%, #996633 61%);
+  color: rgb(255, 255, 255) !important;
+  font-size: 14px;
+  border-color: #5e4800 !important;
+  box-shadow: 2px 2px 2px rgb(141, 98, 33) !important;
+}
+
+.inner3 {
+  background: linear-gradient(to top, #663300 7%, #996633 61%);
+  color: rgb(255, 255, 255) !important;
+  font-size: 14px;
+  border-color: #5e4800 !important;
+  box-shadow: 2px 2px 2px rgb(141, 98, 33) !important;
+}

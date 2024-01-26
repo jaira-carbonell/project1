@@ -1,0 +1,107 @@
+{% extends 'layout.html' %} {% block content %}
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+/>
+<div class="container mt-4">
+  <div class="row">
+    <h1 class="mt-3">Products</h1>
+    <!-- total message -->
+    <!-- Flexbox container for aligning the toasts -->
+    <div
+      aria-live="polite"
+      aria-atomic="true"
+      class="d-flex justify-content-center align-items-center w-100"
+    >
+      <!-- Then put toasts within -->
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-check2-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"
+            />
+            <path
+              d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"
+            />
+          </svg>
+          <strong class="me-auto">Your order is submitted</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">{{ orderMessage }}</div>
+      </div>
+    </div>
+    <!-- end of toask message -->
+    {% for product in products %}
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card inner">
+        <img
+          src="{{ url_for('static',filename=product[4])}}"
+          class="card-img-top img-fluid imgcard"
+          data-bs-toggle="modal"
+          data-bs-target="#productModal"
+          onclick="updateModalImage(this.src)"
+        />
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ product [1] }}</h5>
+          <p class="card-text mb-1">{{ product[2] }}</p>
+          <p class="card-text mb- 1">{{ product[3] }}</p>
+
+          <button
+            type="button"
+            class="btn btn-primary add-item rounded-pill inner2"
+            onclick="addItemToCart('{{ product[3] }}')"
+          >
+            Add Item
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-secondary order-item inner rounded-pill"
+            data-bs-toggle="modal"
+            data-bs-target="#orderModal"
+            data-id="{{ product[0]}}"
+            data-name="{{ product[1] }}"
+            data-price="{{ product[3] }}"
+            data-unit="{{ product[2] }}"
+            data-image="{{ url_for('static', filename=product[4]) }}"
+            onclick="setupModal(this)"
+          >
+            Order Item
+          </button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="text-end mt-4">
+    <h3>Total Cost: <span id="totalCost">0</span> Pesos</h3>
+  </div>
+  {% include "modals/image_modal.html" %} {% include "modals/order_modal.html"
+  %}
+</div>
+{% if session.pop('order_submitted', None) %}
+<script>
+  window.onload = function () {
+    var orderMessage =
+      "{{ session.pop('order_message', 'Your order has been successfully submitted!') }}";
+    var toastEl = document.querySelector(".toast");
+    var toast = new bootstrap.Toast(toastEl);
+    setTimeout(() => {
+      toast.show();
+    }, 2000);
+  };
+</script>
+{% endif %} {% endblock %}
