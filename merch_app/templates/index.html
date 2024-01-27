@@ -45,8 +45,8 @@
     </div>
     <!-- end of toask message -->
     {% for product in products %}
-    <div class="col-md-3 col-sm-6 mb-4">
-      <div class="card inner">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
+      <div class="card inner h-100">
         <img
           src="{{ url_for('static',filename=product[4])}}"
           class="card-img-top img-fluid imgcard"
@@ -86,7 +86,7 @@
     </div>
     {% endfor %}
   </div>
-  <div class="text-end mt-4">
+  <div class="text-center mt-4">
     <h3>Total Cost: <span id="totalCost">0</span> Pesos</h3>
   </div>
   {% include "modals/image_modal.html" %} {% include "modals/order_modal.html"

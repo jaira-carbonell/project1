@@ -29,8 +29,8 @@ function setupModal(button) {
   const price = parseFloat(button.dataset.price);
   const unit = button.dataset.unit;
   quantityInput.value = "1"; // Default value for both kg and pc
-  quantityInput.min = unit === "kg" ? "0.01" : "1"; // Minimum value based on unit
-  quantityInput.step = unit === "kg" ? "0.01" : "1"; // Step value based on unit
+  quantityInput.min = unit === "kg" ? "1.0" : "1"; // Minimum value based on unit
+  quantityInput.step = unit === "kg" ? "1.0" : "1"; // Step value based on unit
   totalPriceInput.value = price.toFixed(2);
 
   quantityInput.oninput = () => {
