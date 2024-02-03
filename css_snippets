@@ -1,0 +1,96 @@
+{
+	// Place your snippets for css here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"style-css": {
+		"prefix": "style.css",
+		"body": [
+"			.card {",
+"  background: linear-gradient(to bottom right, #ffff66 0%, #cc6600 100%);",
+"  color: rgb(255, 250, 250) !important;",
+"  border-top-right-radius: 80px !important;",
+"  border-bottom-left-radius: 80px !important;",
+"  box-shadow: 5px 5px 5px gray !important;",
+"  border-radius: 10px;",
+"  margin: auto;",
+"  height: 400px;",
+"  margin-top: 30px;",
+"}",
+"",
+".navbar {",
+"  background: linear-gradient(to bottom, #ffff66 0%, #cc6600 100%);",
+"  color: rgb(255, 250, 250) !important;",
+"  box-shadow: 5px 5px 5px gray !important;",
+"  border-bottom-right-radius: 90px !important;",
+"}",
+"",
+".imgcard {",
+"  height: 300px !important;",
+"  border-radius: 10px;",
+"  border-top-right-radius: 80px !important;",
+"  border-bottom-left-radius: 80px !important;",
+"}",
+"",
+".btn-secondary {",
+"  background: linear-gradient(to bottom right, #ffff66 0%, #cc6600 100%);",
+"  color: rgb(255, 255, 255) !important;",
+"  font-size: 14px;",
+"  border-color: #5e4800 !important;",
+"  box-shadow: 2px 2px 2px rgb(141, 98, 33) !important;",
+"}",
+"",
+".modal-header {",
+"  background: linear-gradient(to bottom, #ffff66 0%, #cc6600 100%);",
+"}",
+"",
+".modal-footer {",
+"  background: linear-gradient(to bottom, #ffff66 0%, #cc6600 100%);",
+"}",
+"",
+"#modalImg {",
+"  height: 300px;",
+"  width: 300px;",
+"}",
+"",
+"#productImage {",
+"  height: 300px;",
+"  width: 300px;",
+"  margin-left: 20%;",
+"}",
+"",
+".orderbtn:hover {",
+"  border-color: #5e4800 !important;
+"  box-shadow: 2px 2px 2px rgb(141, 98, 33) !important;",
+"}",
+"",
+".inner2 {",
+"  background: linear-gradient(to bottom left, #ffff66 0%, #cc6600 100%);",
+"  color: rgb(255, 255, 255) !important;",
+"  font-size: 14px;",
+"  border-color: #5e4800 !important;",
+"  box-shadow: 2px 2px 2px rgb(141, 98, 33) !important;",
+"}",
+"",
+".inner3 {",
+"  background: linear-gradient(to top, #ffff66 0%, #cc6600 100%);",
+"  color: rgb(255, 255, 255) !important;",
+"  font-size: 14px;",
+"  border-color: #5e4800 !important;",
+"  box-shadow: 2px 2px 2px rgb(141, 98, 33) !important;",
+"}",
+"",
+		],
+		"description": "for css"
+	}
+}
